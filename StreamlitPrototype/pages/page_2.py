@@ -4,8 +4,8 @@ import openai
 from openai import OpenAI
 from pathlib import Path
 
-st.markdown("# Page 3: Transcription 🎉 (Lab 4)")
-st.sidebar.markdown("# Page 3: Transcription 🎉")
+st.markdown("# Page 2: Feature 2")
+st.sidebar.markdown("# Page 2: Feature 2")
 
 
 openai.api_key = os.environ["OPENAI_API_KEY"]
