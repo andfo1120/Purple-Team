@@ -5,10 +5,44 @@ import time
 
 
 
-st.markdown("# Main page ")
-st.sidebar.markdown("# Main page ")
+# Set page configuration
+st.set_page_config(page_title="Button-Based Navigation", layout="centered")
 
-message = "Every second counts in an emergency. Our project is designed to support 911 operators by simplifying and accelerating the transcription process of emergency calls. Using intelligent speech-to-text technology and real-time language processing, the Emergency Transcription Assistant helps convert spoken conversations into clear, searchable text—reducing cognitive load, minimizing errors, and ensuring accurate records for dispatchers and emergency responders. With features like speaker identification, time-stamped entries, and keyword highlighting, our solution enables operators to stay focused on what matters most: saving lives. Whether it's high-stress situations, overlapping voices, or fast-paced information flow, our tool is built to handle the complexity and urgency of 911 communication—streamlining documentation without compromising clarity or speed."
-st.write(message)
+# Initialize session state for navigation
+if "page" not in st.session_state:
+    st.session_state.page = "Home"
 
+# Sidebar button navigation
+with st.sidebar:
+    st.title("Navigation")
 
+    if st.button("Home"):
+        st.session_state.page = "Home"
+    if st.button("Guidelines"):
+        st.session_state.page = "Guidelines"
+    if st.button("Live Transcription"):
+        st.session_state.page = "Live Transcription"
+
+# Define page functions
+def home():
+    st.title("RescueAI")
+    st.write("Every second counts in an emergency.")
+
+def page1():
+    st.title("911 Operator Guidelines")
+
+    # User input textbox
+    user_input = st.text_input("What would you like to know?")
+
+def page2():
+    st.title("Live Call Transciption")
+    st.write("This page allows a user to transcribe a call LIVE!")
+    st.success("You're viewing Page 2!")
+
+# Display current page
+if st.session_state.page == "Home":
+    home()
+elif st.session_state.page == "Guidelines":
+    page1()
+elif st.session_state.page == "Live Transcription":
+    page2()
