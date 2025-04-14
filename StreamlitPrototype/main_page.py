@@ -18,7 +18,7 @@ sj_ems_destination_text = load_pdf_text("C:/Users/Jared/Desktop/AI911OPERATOR/sj
 sjpd_mobile_response_text = load_pdf_text("C:/Users/Jared/Desktop/AI911OPERATOR/sjmobile.pdf")
 
 
-client = OpenAI(api_key="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") 
+client = OpenAI(api_key="my-api-key") 
 
 
 def get_completion(user_input, model="gpt-3.5-turbo"):
