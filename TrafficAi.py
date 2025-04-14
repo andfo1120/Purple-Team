@@ -1,7 +1,7 @@
 import streamlit as st
 from openai import OpenAI
 
-client = OpenAI(api_key="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")  # Replace with your actual key
+client = OpenAI(api_key="open-ai-key")  # Replace with your actual key
 
 st.set_page_config(page_title="Traffic Cam AI", layout="centered")
 #Title
