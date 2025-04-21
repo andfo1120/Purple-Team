@@ -66,11 +66,11 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #0e1a2b;
+        background-color: #183866;
         color: #fdf6e3;
     }
     .stApp {
-        background-color: #0e1a2b;
+        background-color: #183866;
     }
     .stTextArea, .stChatInput {
         border: 1px solid #ffd700;
